@@ -192,4 +192,256 @@
     #appViewer {
       display: none;
       position: fixed;
-      inset:
+      inset: 0;
+      z-index: 1000;
+      background: #fff;
+      flex-direction: column;
+    }
+    #appViewer.open { display: flex; }
+    .app-header {
+      min-height: 56px;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .app-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .btn-back {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .btn-back:hover { background: rgba(255,255,255,0.3); }
+    .app-title {
+      font-weight: 600;
+      font-size: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    #appFrame {
+      flex: 1;
+      width: 100%;
+      border: 0;
+      background: #fff;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 26px; }
+      .hero img.hero-logo { width: 80px; height: 80px; }
+      section { padding: 22px; }
+      nav a { margin-left: 12px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="mainMenu">
+    <header class="site-header">
+      <div class="nav-wrap">
+        <div class="brand">
+          <img class="logo" src="https://iili.io/FYaqxfV.th.png" alt="Logo SMA Negeri 5 Makassar">
+          <div class="brand-text">
+            <strong>SMA Negeri 5 Makassar</strong>
+            <span>Ilmu - Mutu - Akhlak</span>
+          </div>
+        </div>
+        <nav>
+          <a href="#visi">Visi</a>
+          <a href="#misi">Misi</a>
+          <a href="#portal">Portal</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero">
+      <img class="hero-logo" src="https://iili.io/FYaqxfV.th.png" alt="Logo SMA Negeri 5 Makassar">
+      <h1>SMA Negeri 5 Makassar</h1>
+      <span class="slogan">ILMU - MUTU - AKHLAK</span>
+      <p>Portal informasi dan layanan resmi untuk siswa, guru, dan orang tua</p>
+    </div>
+
+    <main>
+      <section id="visi">
+        <h2>Visi</h2>
+        <p>Setelah menganalisis kekuatan, kelemahan, peluang dan ancaman yang mungkin terjadi di SMA Negeri 5 Makassar, dengan memperhatikan masukan dan saran dari semua stake holder, maka disusunlah rumusan visi SMA Negeri 5 Makassar.</p>
+        <div class="vision-text">
+          "Mewujudkan generasi emas yang unggul dalam prestasi, berkarakter, inovatif, kolaboratif, berdaya saing global dengan menjunjung tinggi nilai-nilai religius, seni, dan budaya serta peduli terhadap lingkungan."
+        </div>
+      </section>
+
+      <section id="misi">
+        <h2>Misi</h2>
+        <p>Penjabaran dari Visi SMA Negeri 5 Makassar dapat dilihat dari misi berikut:</p>
+        <ol class="mission-list">
+          <li>Meningkatkan jumlah siswa yang meraih prestasi akademik dan non-akademik.</li>
+          <li>Membekali peserta didik dengan pengetahuan dan keterampilan agar mampu masuk perguruan tinggi di dalam maupun luar negeri.</li>
+          <li>Membudayakan perilaku religius dalam segala aspek kehidupan di sekolah.</li>
+          <li>Membudayakan 5S (Senyum, Sapa, Salam, Sopan, dan Santun).</li>
+          <li>Meningkatkan jumlah inovasi yang dihasilkan oleh siswa dan guru.</li>
+          <li>Menyelenggarakan pendidikan, pengajaran, dan pembimbingan ramah anak.</li>
+          <li>Mewujudkan lingkungan belajar yang kondusif, yang menumbuhkan semangat disiplin, kreativitas, dan cinta terhadap budaya bangsa.</li>
+          <li>Meningkatkan kesadaran warga sekolah terhadap pentingnya lingkungan yang bersih, sehat, indah, aman dan nyaman.</li>
+        </ol>
+      </section>
+
+      <section id="portal">
+        <h2>Portal Layanan</h2>
+
+        <div class="portal-group">
+          <h3>E-Rapor</h3>
+          <div class="grid">
+            <a class="card" href="https://script.google.com/a/~/macros/s/AKfycbxA1RCvV2j-UmG5MUo0ucH5gyCn6ne9XCJdDCzZRzVqnpjIYSqH49szKUdQybAOTyFvsg/exec">
+              <div class="icon">📘</div>
+              <h4>E-Rapor Kelas X</h4>
+              <p>Akses e-rapor siswa kelas X</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://script.google.com/a/~/macros/s/AKfycbzn8tDvL24LiW0QDVtLvk0DPmL-DpiccEyBHHzjzbs96_2tRbcJ9w_Rv41VbXIZp-BjDA/exec">
+              <div class="icon">📗</div>
+              <h4>E-Rapor Kelas XI</h4>
+              <p>Akses e-rapor siswa kelas XI</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://script.google.com/a/~/macros/s/AKfycbycvLaYANQVbvgXDg6nFcxTkZwekcSpvlBRUUZMZ1ETC1GOLjKxrJx_npJdWD_MEXXs4g/exec">
+              <div class="icon">📕</div>
+              <h4>E-Rapor Kelas XII</h4>
+              <p>Akses e-rapor siswa kelas XII</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://script.google.com/macros/s/AKfycbxsXF0OJVNKXalk_ovKazfDK2YbHnWqS9RQRJxBac8oykiQNZepoO12dJ7kOFdxJr-B/exec">
+              <div class="icon">✅</div>
+              <h4>Validasi Nilai Rapor Kelas XII</h4>
+              <p>Pemeriksaan dan validasi nilai rapor kelas XII</p>
+              <span class="open">Buka portal →</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="portal-group">
+          <h3>Guru</h3>
+          <div class="grid">
+            <a class="card" href="https://script.google.com/a/~/macros/s/AKfycbzmiLRTKjxHGP8qyek0RnLUzrz1JdW6pzDSVqi-B2pVk16-qQZnh9ltuRoMSSRQvKYfmA/exec">
+              <div class="icon">🗓️</div>
+              <h4>Pengisian Piket Guru</h4>
+              <p>Pengisian jadwal piket guru</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://datastudio.google.com/reporting/bcaa7293-2365-43e4-bde8-5d49aab0c32b/page/9nBdE">
+              <div class="icon">📊</div>
+              <h4>Cek Rekap Kehadiran Guru</h4>
+              <p>Lihat rekap kehadiran guru</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://websapp.my.canva.site/hafalansman5mks">
+              <div class="icon">📖</div>
+              <h4>Setoran Hafalan Guru</h4>
+              <p>Setoran hafalan untuk guru</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://script.google.com/a/macros/guru.sma.belajar.id/s/AKfycbwSLWl1GaIn8cOcY8KVXnvPoWBUlKZLVxgqpbPbY7ultZ94wFwtBqz2ZYeeYZQOv3EI/exec">
+              <div class="icon">👥</div>
+              <h4>Portal Guru Wali</h4>
+              <p>Cari data anak wali dan guru wali</p>
+              <span class="open">Buka portal →</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="portal-group">
+          <h3>Siswa &amp; Akademik</h3>
+          <div class="grid">
+            <a class="card" href="https://script.google.com/a/~/macros/s/AKfycbwnp1qRZaGOKulYpvYQTNmEKJ79weSDYFe5YvEy5uu9PkrEIF7izyOg54-viphqIqobtg/exec">
+              <div class="icon">🔀</div>
+              <h4>Mapel Pilihan / Moving Kelas X</h4>
+              <p>Hasil mapel pilihan kelas X</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://script.google.com/a/~/macros/s/AKfycbxj2u8FC5RtPO-kYJU3hDLj15SKNfSHxiOp83j7hUPsln8E3URrZ1Bp-8nq4an_P2By/exec">
+              <div class="icon">🎓</div>
+              <h4>Pengumuman Kelulusan</h4>
+              <p>Cek hasil kelulusan siswa</p>
+              <span class="open">Buka portal →</span>
+            </a>
+            <a class="card" href="https://script.google.com/a/~/macros/s/AKfycbzgQXrxsJxjpHrJ-hq4MYQTM9OPQMH_2cY3sVjBNZFOMrgbiE2wstTKsawV8kphFo10sA/exec">
+              <div class="icon">🏆</div>
+              <h4>Input Prestasi</h4>
+              <p>Pencatatan prestasi siswa</p>
+              <span class="open">Buka portal →</span>
+            </a>
+          </div>
+        </div>
+
+        <p class="notice">Setiap portal dibuka di dalam halaman ini. Gunakan tombol "Kembali" untuk kembali ke menu utama.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>SMA Negeri 5 Makassar</strong><br>
+      Ilmu - Mutu - Akhlak<br>
+      &copy; 2026 SMA Negeri 5 Makassar. Seluruh hak cipta dilindungi.
+    </footer>
+  </div>
+
+  <div id="appViewer" aria-hidden="true">
+    <div class="app-header">
+      <div class="app-left">
+        <button class="btn-back" type="button" id="btnKembali">← Kembali</button>
+        <span class="app-title" id="judulAplikasi">Portal</span>
+      </div>
+    </div>
+    <iframe id="appFrame" title="Portal" src="about:blank"></iframe>
+  </div>
+
+  <script>
+    (function () {
+      var menu = document.getElementById('mainMenu');
+      var viewer = document.getElementById('appViewer');
+      var frame = document.getElementById('appFrame');
+      var title = document.getElementById('judulAplikasi');
+
+      function bukaAplikasi(url, judul) {
+        title.textContent = judul;
+        frame.src = url;
+        menu.style.display = 'none';
+        viewer.classList.add('open');
+        viewer.setAttribute('aria-hidden', 'false');
+        window.scrollTo(0, 0);
+      }
+
+      function tutupAplikasi() {
+        frame.src = 'about:blank';
+        viewer.classList.remove('open');
+        viewer.setAttribute('aria-hidden', 'true');
+        menu.style.display = '';
+      }
+
+      document.querySelectorAll('a.card[href^="http"]').forEach(function (card) {
+        card.addEventListener('click', function (e) {
+          // Ctrl/Cmd/Shift-klik tetap membuka tab baru jika pengunjung memaksanya dari browser
+          if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+          e.preventDefault();
+          var h = card.querySelector('h4');
+          bukaAplikasi(card.href, h ? h.textContent : 'Portal');
+        });
+      });
+
+      document.getElementById('btnKembali').addEventListener('click', tutupAplikasi);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && viewer.classList.contains('open')) tutupAplikasi();
+      });
+    })();
+  </script>
+</body>
+</html>
